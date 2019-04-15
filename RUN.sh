@@ -61,8 +61,8 @@ mkdir -p "$out"
 for color in $colors ; do
   dir="$out/$color"
   mkdir -p "$dir"
-  mkicon telegram.svg "$dir/ico_22_0.png" "$color" ""
-  cp "$dir/ico_22_0.png" "$dir/icomute_22_0.png"
+  mkicon telegram.svg "$dir/icon_22_0.png" "$color" ""
+  cp "$dir/ico_22_0.png" "$dir/iconmute_22_0.png"
   for n in {1..1100} ; do
     test $verbose -ne 0 && \
         printf '\rcreating icon for color %s [%d of 1100] ...' $color $n
@@ -71,8 +71,8 @@ for color in $colors ; do
     else
       s=`printf '%02d' $n`
     fi
-    mkicon telegram_gray.svg "$dir/icomute_22_$n.png" "$color" "$s"
-    mkicon telegram_red.svg "$dir/ico_22_$n.png" "$color" "$s"
+    mkicon telegram_gray.svg "$dir/iconmute_22_$n.png" "$color" "$s"
+    mkicon telegram_red.svg "$dir/icon_22_$n.png" "$color" "$s"
   done
   test $verbose -ne 0 && \
     printf '\ricons for color %s created.                    \n' $color
